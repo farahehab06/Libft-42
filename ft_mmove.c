@@ -3,8 +3,8 @@ void *ft_mmove(void *dest, const void *src, size_t n)
 	unsigned char *d;
 	 const unsigned char *s;
 
-	d=dest;
-	s=src;
+	d=  dest;
+	s= src;
 
 	if(dest <src)
 		while(n--)
