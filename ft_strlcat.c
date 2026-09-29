@@ -6,7 +6,7 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/28 16:51:48 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/09/28 21:01:07 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/09/29 11:39:57 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,11 @@ dst[deslen + i] = '\0';
 return (deslen + srclen);
 }
 int main(){
-char	f[] = "farah";
-	char	j[] = "jood";
+char	f[] = "f";
+	char	j[] = "";
 
-    printf("%zu",strlcat(j,f,0)); 
-    printf("%zu",ft_strlcat(j,f,0));
+    printf("%zu",strlcat(j,f,1)); 
+    printf("%zu",ft_strlcat(j,f,1));
     return (0);
     
     
