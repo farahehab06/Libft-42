@@ -6,7 +6,7 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 10:19:33 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/09/30 10:43:04 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/01 17:49:34 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ char  *ft_strjoin(char const *s1, char const *s2)
    size_t  j;
    char *ptr;
 
+   if (!s1 || !s2)
+		return (NULL);
    s1len = ft_strlen(s1);
    s2len = ft_strlen(s2);
    i = 0;

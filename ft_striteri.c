@@ -1,42 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/29 19:47:04 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/09/30 09:45:09 by fabuassa         ###   ########.fr       */
+/*   Created: 2026/10/03 09:11:01 by fabuassa          #+#    #+#             */
+/*   Updated: 2026/10/03 09:28:24 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-void ft_bzero (void *s, size_t n)
-{
-	unsigned char *p;
+#include<stdlib.h>
+#include <stdio.h>
 
-	p = s;
-	while(n--)
-	{
-		*p++ = 0;
-	}
-}
-void *ft_calloc(size_t nmemb,size_t size)
+
+void ft_striteri(char *s, void (*f)(unsigned int,char*))
 {
-  void *ptr;
+  unsigned int  i;
+
+  i = 0;
+  while(s[i] !='\0')
+  {
+    f(i,&s[i]);
+    i++;
+  }
+}
+void	upper_func(unsigned int i, char *c)
+{
+	if (i % 2 == 0)
+		*c=*c-32;
+
+}
+int main()
+{
+char  s[]="farah";
+	 ft_striteri(s, upper_func);
+	printf("%s\n", s);
+  return(0);
+}
   
-  if(nmemb == 0 || size == 0)
-  return (malloc(1));
-if (nmemb > ((size_t )-1) /size)
-return(NULL);
-
-  ptr=malloc(nmemb *size);
-  if(ptr == NULL)
-  return (NULL);
-
-  ft_bzero(ptr,nmemb * size);
-
-
-return (ptr);
-
-}
