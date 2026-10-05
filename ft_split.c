@@ -6,7 +6,7 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 11:14:23 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/10/02 22:56:22 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/05 19:19:24 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,70 +29,76 @@ int countwords(char const *s,char c)
   }
   return (words);
 }
+char  *copy(char const *s,int start,int end)
+{
+  char  *word;
+  int i;
+
+  word = malloc(end - start + 1);
+  if(!word)
+  return(NULL);
+i = 0;
+while(start < end)
+word[i++]=s[start++];
+word[i]='\0';
+return(word);
+}
+void  free_arr(char **array, int  j)
+{
+  int i;
+
+  i = 0;
+  while(i < j)
+  {
+    free(array[i]);
+    i++;
+  }
+  free(array);
+}
+int fill(char **array,char const *s,char c , int *i , int *j)
+{
+    int start;
+    
+      start = *i;
+    while(s[*i] != '\0' && s[*i] != c)
+      (*i)++;
+   array[*j] = copy(s, start, *i);
+    if(array[*j] == NULL)
+return (0);
+ (*j)++;
+ return (1);
+}
 char **ft_split(char const *s, char c)
 {
   char  **array;
-  int numOfWords;
   int i;
   int j;
-  int start;
-  int z;
-  int k;
-  int f;
 
    if(s == NULL)
   return (NULL);
-  numOfWords = countwords(s,c);
-  array= malloc((numOfWords+1)* sizeof(char *));
+  array= malloc((countwords(s,c) + 1) * sizeof(char *));
   if(array == NULL)
   return (NULL);
   i = 0;
   j = 0;
-  while(s[i] != '\0' && j < numOfWords)
+  while(s[i] != '\0')
   {
     while (s[i] == c)
     i++;
-  if (s[i] == '\0')
-	break;
-    start =i;
-    z = start;
-    k = 0;
-    
-    while(s[i] != '\0' && s[i] != c)
-    {
-      i++;
-    }
-    array[j] = malloc(i - start + 1);
-    f = 0;
-    if(array[j] == NULL)
-    { 
-      while (f < j)
-      {
-        free(array[f]);
-        f++;
-      }
-      free(array);
-    return (NULL);
-  }
-    while(z < i)
-    {
-      array[j][k]=s[z];
-      z++;
-      k++;
-    }
-    array[j][k] = '\0';
-    j++;
+  if(s[i] == '\0')
+	  break;
+ 	if(!fill(array, s, c, &i, &j))
+			return (free_arr(array, j), NULL);
   }
 array[j]= NULL; 
   return (array);
 }
-
 int	main(void)
 {
 	char	**str;
 	int		i;
 
-	str = ft_split("abc", '\0');
+	str = ft_split("  hello world -42 ", ' ');
 	if (str == NULL)
 	{
 		printf("ft_split returned NULL\n");
