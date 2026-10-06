@@ -1,9 +1,11 @@
-void ft_bzero (void *s, size_t n)
+#include <stdio.h>
+
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *p;
+	unsigned char	*p;
 
 	p = s;
-	while(n--)
+	while (n--)
 	{
 		*p++ = 0;
 	}

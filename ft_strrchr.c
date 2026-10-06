@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<string.h>
-#include<stdio.h>
+#include <stdio.h>
+#include <string.h>
 
 size_t	ft_strlen(const char *s)
 {
@@ -27,33 +27,29 @@ size_t	ft_strlen(const char *s)
 	}
 	return (l);
 }
-char *ft_strrchr(const char *s,int c)
+
+char	*ft_strrchr(const char *s, int c)
 {
-    int i;
+	int	i;
 
-  i = strlen(s)  ;
-  while ( i >= 0 )
-  {
-    if (s[i] == c)
-    {
-      return ( (char*)&s[i]);
-    }
-    i--;
-  }
-  
-  
-  return (NULL);
+	i = strlen(s);
+	while (i >= 0)
+	{
+		if (s[i] == c)
+		{
+			return ((char *)&s[i]);
+		}
+		i--;
+	}
+	return (NULL);
 }
-int main(){
-char	f[] = "f";
-	char	j[] = "jood";
 
-    printf("%s",strrchr(j,'l')); 
-    printf("%s",ft_strrchr(j,'l'));
-    return (0);
-    
-    
-    
-    
+// int	main(void)
+// {
+// 	char f[] = "f";
+// 	char j[] = "jood";
 
-}
+// 	printf("%s", strrchr(j, 'l'));
+// 	printf("%s", ft_strrchr(j, 'l'));
+// 	return (0);
+// }

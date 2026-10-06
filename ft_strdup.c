@@ -10,9 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include<stdio.h>
+
 size_t	ft_strlen(const char *s)
 {
 	int		i;
@@ -27,40 +28,41 @@ size_t	ft_strlen(const char *s)
 	}
 	return (l);
 }
-char  *ft_strdup(const char *s)
-{
-  char  *ptr;
-  size_t  len;
-  size_t  i;
 
-  len = ft_strlen(s);
-  i = 0;
-  ptr = malloc(len + 1);
-  if(ptr == NULL)
-  return (NULL);
-while( i < len )
+char	*ft_strdup(const char *s)
 {
-  ptr[i] =s[i];
-  i++;
-}
-ptr[i]= '\0';
-return (ptr);
-}
-int	main(void)
-{
-	char	*copy;
+	char	*ptr;
+	size_t	len;
+	size_t	i;
 
-	copy = ft_strdup(" ");
-	if (copy == NULL)
+	len = ft_strlen(s);
+	i = 0;
+	ptr = malloc(len + 1);
+	if (ptr == NULL)
+		return (NULL);
+	while (i < len)
 	{
-		printf("%s","malloc failed\n");
-		return (1);
+		ptr[i] = s[i];
+		i++;
 	}
-
-	
-	printf("copy: %s\n", copy);
-	printf("og:   %s\n", strdup(" "));
-
-	free(copy);
-	return (0);
+	ptr[i] = '\0';
+	return (ptr);
 }
+
+// int	main(void)
+// {
+// 	char	*copy;
+// 	char	*og;
+
+// 	copy = ft_strdup("jjjj");
+// 	og = strdup("jjjj");
+// 	if (!copy || !og)
+// 		return (1);
+
+// 	printf("copy: %s\n", copy);
+// 	printf("og:   %s\n", og);
+
+// 	free(copy);
+// 	free(og);
+// 	return (0);
+// }

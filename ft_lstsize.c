@@ -11,21 +11,22 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
+
 typedef struct s_list
 {
-    void            *content;
-    struct s_list   *next;
-} t_list;
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
-unsigned int  ft_lstsize(t_list *lst)
+unsigned int	ft_lstsize(t_list *lst)
 {
-  unsigned int  len;
+	unsigned int	len;
 
-  len = 0;
-  while (lst != NULL)
-  {
-  len++;
-  lst = lst -> next;
-  }
-return(len);
+	len = 0;
+	while (lst != NULL)
+	{
+		len++;
+		lst = lst->next;
+	}
+	return (len);
 }

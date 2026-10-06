@@ -11,21 +11,23 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
+
 typedef struct s_list
 {
-    void            *content;
-    struct s_list   *next;
-} t_list;
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
-void  ft_lstiter(t_list *lst, void(*f) (void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-  t_list  *temp;
-  if(lst == NULL || f == NULL)
-  return ;
-temp = lst;
-while(temp != NULL)
-{
-  f(temp -> content);
-  temp = temp -> next;
-}
+	t_list	*temp;
+
+	if (lst == NULL || f == NULL)
+		return ;
+	temp = lst;
+	while (temp != NULL)
+	{
+		f(temp->content);
+		temp = temp->next;
+	}
 }

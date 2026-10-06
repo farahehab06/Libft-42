@@ -10,47 +10,39 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include <stdio.h>
 #include <bsd/string.h>
-size_t    ft_strlcat(char *dst, const char *src, size_t size)
-{
-size_t srclen;
-size_t deslen;
-size_t i;
+#include <stdio.h>
 
-srclen = 0;
-deslen = 0;
-i = 0;
-while (src[srclen] != '\0')
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-    srclen++;
-}
-while ( deslen<size && dst[deslen] != '\0')
-{
-deslen++;
-}
-if(deslen == size )
-{
-    return (size + srclen);
-}
-while(i + deslen < size - 1 && src[i] !='\0' )
-{
-    dst[deslen + i] = src[i];
-    i++; 
-}
-dst[deslen + i] = '\0';
-return (deslen + srclen);
-}
-int main(){
-char	f[] = "f";
-	char	j[] = "";
+	size_t	srclen;
+	size_t	deslen;
+	size_t	i;
 
-    printf("%zu",strlcat(j,f,1)); 
-    printf("%zu",ft_strlcat(j,f,1));
-    return (0);
-    
-    
-    
-    
+	srclen = 0;
+	deslen = 0;
+	i = 0;
+	while (src[srclen] != '\0')
+		srclen++;
+	while (deslen < size && dst[deslen] != '\0')
+		deslen++;
+	if (deslen == size)
+		return (size + srclen);
+	while (i + deslen < size - 1 && src[i] != '\0')
+	{
+		dst[deslen + i] = src[i];
+		i++;
+	}
+	dst[deslen + i] = '\0';
+	return (deslen + srclen);
 }
+
+// int	main(void)
+// {
+// 	char f[] = "f";
+// 	char j[] = "";
+
+// 	printf("%zu", strlcat(j, f, 1));
+// 	printf("%zu", ft_strlcat(j, f, 1));
+// 	return (0);
+// }

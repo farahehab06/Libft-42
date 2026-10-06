@@ -10,32 +10,31 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-
-void ft_striteri(char *s, void (*f)(unsigned int,char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-  unsigned int  i;
+	unsigned int	i;
 
-  i = 0;
-  while(s[i] !='\0')
-  {
-    f(i,&s[i]);
-    i++;
-  }
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
-void	upper_func(unsigned int i, char *c)
-{
-	if (i % 2 == 0)
-		*c=*c-32;
 
-}
-int main()
-{
-char  s[]="farah";
-	 ft_striteri(s, upper_func);
-	printf("%s\n", s);
-  return(0);
-}
-  
+// void	upper_func(unsigned int i, char *c)
+// {
+// 	if (i % 2 == 0)
+// 		*c = *c - 32;
+// }
+// int	main(void)
+// {
+// 	char	s[] = "farah";
+
+// 	ft_striteri(s, upper_func);
+// 	printf("%s\n", s);
+// 	return (0);
+// }

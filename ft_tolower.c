@@ -10,19 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-  #include <ctype.h>
-#include<stdio.h>
-int ft_tolower(int c)
+#include <ctype.h>
+#include <stdio.h>
+
+int	ft_tolower(int c)
 {
-  if ( c >= 'A' && c <= 'Z')
-  {
-    c = c + 32;
-  }
-  return (c);
+	if (c >= 'A' && c <= 'Z')
+	{
+		c = c + 32;
+	}
+	return (c);
 }
-int main()
-{
-  printf("%c",ft_tolower('5'));
-    printf("%c",tolower('5'));
-  
-}
+
+// int	main(void)
+// {
+// 	printf("%c", ft_tolower('5'));
+// 	printf("%c", tolower('5'));
+// }

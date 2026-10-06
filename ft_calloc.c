@@ -3,40 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jalghamd <jalghamd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 19:47:04 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/09/30 09:45:09 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/05 22:31:36 by jalghamd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-void ft_bzero (void *s, size_t n)
+
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *p;
+	unsigned char	*p;
 
 	p = s;
-	while(n--)
+	while (n--)
 	{
 		*p++ = 0;
 	}
 }
-void *ft_calloc(size_t nmemb,size_t size)
+
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-  void *ptr;
-  
-  if(nmemb == 0 || size == 0)
-  return (malloc(1));
-if (nmemb > ((size_t )-1) /size)
-return(NULL);
+	void	*ptr;
 
-  ptr=malloc(nmemb *size);
-  if(ptr == NULL)
-  return (NULL);
-
-  ft_bzero(ptr,nmemb * size);
-
-
-return (ptr);
-
+	if (nmemb == 0 || size == 0)
+		return (malloc(1));
+	if (nmemb > ((size_t)-1) / size)
+		return (NULL);
+	ptr = malloc(nmemb * size);
+	if (ptr == NULL)
+		return (NULL);
+	ft_bzero(ptr, nmemb * size);
+	return (ptr);
 }

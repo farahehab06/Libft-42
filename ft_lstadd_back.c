@@ -10,27 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <stdlib.h>
-#include<stdio.h>
+
 typedef struct s_list
 {
-    void            *content;
-    struct s_list   *next;
-} t_list;
-void  ft_lstadd_back(t_list **lst, t_list *new)
-{
-  t_list  *tmp;
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
-  tmp = *lst;
-  if(*lst == NULL)
-  {
-    lst -> next = new;
-    return ;
-  }
-  
-     while (tmp -> next != NULL)
-  {
-  tmp = tmp -> next;
-  }
-  tmp -> next = new;
+void	ft_lstadd_back(t_list **lst, t_list *new)
+{
+	t_list	*tmp;
+
+	tmp = *lst;
+	if (*lst == NULL)
+	{
+		lst->next = new;
+		return ;
+	}
+	while (tmp->next != NULL)
+	{
+		tmp = tmp->next;
+	}
+	tmp->next = new;
 }
