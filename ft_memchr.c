@@ -6,12 +6,11 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 13:42:50 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/09/29 14:07:52 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 12:45:39 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

@@ -6,14 +6,13 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 12:02:46 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/10/03 08:58:47 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 12:50:04 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-int	numlen(int n)
+static int	numlen(int n)
 {
 	int	len;
 

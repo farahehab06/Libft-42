@@ -6,17 +6,11 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 15:26:28 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/10/03 15:30:15 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 12:52:06 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
+#include "libft.h"
 
 unsigned int	ft_lstsize(t_list *lst)
 {

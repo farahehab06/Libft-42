@@ -6,11 +6,11 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 11:58:29 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/10/03 12:02:45 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 12:51:08 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {
@@ -24,10 +24,10 @@ void	ft_putendl_fd(char *s, int fd)
 	}
 	write(fd, "\n", 1);
 }
-int	main(void)
-{
-	char f[] = " 582";
-	char y[] = "farah";
-	ft_putendl_fd(f, 1);
-	ft_putendl_fd(y, 1);
-}
+// int	main(void)
+// {
+// 	char f[] = " 582";
+// 	char y[] = "farah";
+// 	ft_putendl_fd(f, 1);
+// 	ft_putendl_fd(y, 1);
+// }

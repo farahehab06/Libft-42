@@ -6,28 +6,11 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 22:04:12 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/09/29 22:19:26 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 12:47:17 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-size_t	ft_strlen(const char *s)
-{
-	int		i;
-	size_t	l;
-
-	i = 0;
-	l = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-		l++;
-	}
-	return (l);
-}
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {

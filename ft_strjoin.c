@@ -6,60 +6,34 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 10:19:33 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/10/01 17:49:34 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 13:34:37 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s)
-{
-	int		i;
-	size_t	l;
-
-	i = 0;
-	l = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-		l++;
-	}
-	return (l);
-}
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	s1len;
-	size_t	s2len;
 	size_t	i;
 	size_t	j;
 	char	*ptr;
 
 	if (!s1 || !s2)
 		return (NULL);
-	s1len = ft_strlen(s1);
-	s2len = ft_strlen(s2);
-	i = 0;
-	j = 0;
-	ptr = malloc(s1len + s2len + 1);
+	i = j = 0;
+	ptr = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (ptr == NULL)
 		return (NULL);
-	while (i < s1len && s1[i] != '\0')
+	while (i < ft_strlen(s1) && s1[i] != '\0')
 	{
 		ptr[i] = s1[i];
 		i++;
 	}
-	while (j < s2len && s2[j] != '\0')
-	{
-		ptr[i] = s2[j];
-		j++;
-		i++;
-	}
+	while (j < ft_strlen(s2) && s2[j] != '\0')
+		ptr[i++] = s2[j++];
 	ptr[i] = '\0';
 	return (ptr);
 }
-
 // int	main(void)
 // {
 // 	char f[] = "hi ";

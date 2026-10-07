@@ -6,11 +6,11 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 11:53:24 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/10/03 11:57:45 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 12:50:57 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
@@ -23,8 +23,8 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
-int	main(void)
-{
-	char f[] = " 582";
-	ft_putstr_fd(f, 0);
-}
+// int	main(void)
+// {
+// 	char f[] = " 582";
+// 	ft_putstr_fd(f, 0);
+// }

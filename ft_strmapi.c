@@ -6,27 +6,11 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 08:59:53 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/10/03 09:24:16 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 13:22:50 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s)
-{
-	int		i;
-	size_t	l;
-
-	i = 0;
-	l = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-		l++;
-	}
-	return (l);
-}
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -34,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*s2;
 	size_t			len;
 
+	if (!s || !f)
+		return ;
 	i = 0;
 	len = ft_strlen(s);
 	s2 = malloc(len + 1);
@@ -47,7 +33,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	s2[i] = '\0';
 	return (s2);
 }
-
 // char	upper_func(unsigned int i, char c)
 // {
 // 	if (i % 2 == 0)

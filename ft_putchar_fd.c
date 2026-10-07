@@ -6,17 +6,17 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 11:53:37 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/10/03 11:53:46 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 12:51:30 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-int	main(void)
-{
-	ft_putchar_fd('f', 1);
-}
+// int	main(void)
+// {
+// 	ft_putchar_fd('f', 1);
+// }

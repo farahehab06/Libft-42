@@ -6,11 +6,11 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 12:03:01 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/10/03 12:40:03 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 12:51:49 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -28,7 +28,7 @@ void	ft_putnbr_fd(int n, int fd)
 	c = n % 10 + '0';
 	write(fd, &c, 1);
 }
-int	main(void)
-{
-	ft_putnbr_fd(52, 1);
-}
+// int	main(void)
+// {
+// 	ft_putnbr_fd(52, 1);
+// }

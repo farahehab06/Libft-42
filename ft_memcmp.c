@@ -6,12 +6,11 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 14:09:20 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/09/29 14:16:24 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 12:45:48 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

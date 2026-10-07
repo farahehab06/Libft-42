@@ -6,17 +6,11 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 16:39:46 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/10/03 16:49:14 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 13:15:17 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {

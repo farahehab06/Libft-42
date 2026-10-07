@@ -6,12 +6,11 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/28 16:51:48 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/09/29 11:39:57 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 12:44:41 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <bsd/string.h>
-#include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

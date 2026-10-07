@@ -6,29 +6,13 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 10:43:43 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/09/30 11:12:32 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 13:29:31 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
-{
-	int		i;
-	size_t	l;
-
-	i = 0;
-	l = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-		l++;
-	}
-	return (l);
-}
-
-int	set_check(char c, char const *set)
+static int	set_check(char c, char const *set)
 {
 	size_t	i;
 
@@ -49,9 +33,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*ptr;
 	size_t	i;
 
-	front = 0;
+	if (!s1 || !set)
+		return ;
+	(NULL);
+	front = i = 0;
 	back = ft_strlen(s1);
-	i = 0;
 	while (s1[front] != '\0' && set_check(s1[front], set))
 		front++;
 	while (back > front && set_check(s1[back - 1], set))
@@ -60,15 +46,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (ptr == NULL)
 		return (NULL);
 	while (back > front)
-	{
-		ptr[i] = s1[front];
-		i++;
-		front++;
-	}
+		ptr[i++] = s1[front++];
 	ptr[i] = '\0';
 	return (ptr);
 }
-
 // int	main(void)
 // {
 // 	char *result;

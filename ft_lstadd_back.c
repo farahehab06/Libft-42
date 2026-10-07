@@ -6,29 +6,24 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 16:08:35 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/10/03 16:15:03 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 13:16:47 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
+#include "libft.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*tmp;
 
-	tmp = *lst;
+	if (!lst || !new)
+		return ;
 	if (*lst == NULL)
 	{
-		lst->next = new;
+		*lst = new;
 		return ;
 	}
+	tmp = *lst;
 	while (tmp->next != NULL)
 	{
 		tmp = tmp->next;

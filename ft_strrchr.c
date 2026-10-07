@@ -6,27 +6,11 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 12:36:28 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/09/29 12:45:20 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 13:24:39 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-
-size_t	ft_strlen(const char *s)
-{
-	int		i;
-	size_t	l;
-
-	i = 0;
-	l = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-		l++;
-	}
-	return (l);
-}
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -35,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 	i = strlen(s);
 	while (i >= 0)
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 		{
 			return ((char *)&s[i]);
 		}

@@ -6,17 +6,11 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 16:54:13 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/10/03 16:59:01 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 13:14:42 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
+#include "libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {

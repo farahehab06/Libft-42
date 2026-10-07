@@ -6,14 +6,13 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 11:14:23 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/10/05 19:19:24 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 13:40:26 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-int	countwords(char const *s, char c)
+static int	countwords(char const *s, char c)
 {
 	int	i;
 	int	words;
@@ -29,7 +28,7 @@ int	countwords(char const *s, char c)
 	return (words);
 }
 
-char	*copy(char const *s, int start, int end)
+static char	*copy(char const *s, int start, int end)
 {
 	char	*word;
 	int		i;
@@ -44,7 +43,7 @@ char	*copy(char const *s, int start, int end)
 	return (word);
 }
 
-void	free_arr(char **array, int j)
+static void	free_arr(char **array, int j)
 {
 	int	i;
 
@@ -57,18 +56,14 @@ void	free_arr(char **array, int j)
 	free(array);
 }
 
-int	fill(char **array, char const *s, char c, int *i, int *j)
+static char	*fill(char **array, char const *s, char c, int *i)
 {
 	int	start;
 
 	start = *i;
 	while (s[*i] != '\0' && s[*i] != c)
 		(*i)++;
-	array[*j] = copy(s, start, *i);
-	if (array[*j] == NULL)
-		return (0);
-	(*j)++;
-	return (1);
+	return (copy(s, start, *i));
 }
 
 char	**ft_split(char const *s, char c)
@@ -90,13 +85,13 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if (s[i] == '\0')
 			break ;
-		if (!fill(array, s, c, &i, &j))
+		array[j] = fill(s, c, &i);
+		if (!array[j])
 			return (free_arr(array, j), NULL);
 	}
 	array[j] = NULL;
 	return (array);
 }
-
 // int	main(void)
 // {
 // 	char **str;
