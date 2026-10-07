@@ -6,7 +6,7 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 12:36:28 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/10/07 13:24:39 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 14:47:34 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
-	i = strlen(s);
+	i = ft_strlen(s);
 	while (i >= 0)
 	{
 		if (s[i] == (char)c)

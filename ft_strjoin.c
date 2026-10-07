@@ -6,7 +6,7 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 10:19:33 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/10/07 13:34:37 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 14:52:00 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	i = j = 0;
+	i = 0;
+	j = 0;
 	ptr = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (ptr == NULL)
 		return (NULL);

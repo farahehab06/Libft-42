@@ -6,7 +6,7 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 11:14:23 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/10/07 13:40:26 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 14:49:44 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ static void	free_arr(char **array, int j)
 	free(array);
 }
 
-static char	*fill(char **array, char const *s, char c, int *i)
+static char	*fill(char const *s, char c, int *i)
 {
 	int	start;
 

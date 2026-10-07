@@ -6,15 +6,15 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 19:25:53 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/10/07 12:46:43 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 14:59:14 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	parsnum(const char *nptr, int i)
+static long	parsnum(const char *nptr, int i)
 {
-	int	num;
+	long	num;
 
 	num = 0;
 	while (nptr[i] <= '9' && nptr[i] >= '0')
@@ -36,19 +36,19 @@ int	ft_atoi(const char *nptr)
 	}
 	if (nptr[i] == '-')
 	{
-		return (parsnum(nptr, i + 1) * -1);
+		return ((int)parsnum(nptr, i + 1) * -1);
 	}
 	else if (nptr[i] == '+')
 	{
-		return (parsnum(nptr, i + 1));
+		return ((int)parsnum(nptr, i + 1));
 	}
 	else
-		return (parsnum(nptr, i));
+		return ((int)parsnum(nptr, i));
 }
 
 // int	main(void)
 // {
 // 	char m[] = "-2147483648";
-// 	// printf("my atoi:%d\n", ft_atoi(m));
+// 	printf("my atoi:%d\n", ft_atoi(m));
 // 	printf("original:%d", atoi(m));
 // }

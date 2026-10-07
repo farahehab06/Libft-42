@@ -6,7 +6,7 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 10:43:43 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/10/07 13:29:31 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 14:51:26 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	i;
 
 	if (!s1 || !set)
-		return ;
+		return (NULL);
 	(NULL);
-	front = i = 0;
+	front = 0;
+	i = 0;
 	back = ft_strlen(s1);
 	while (s1[front] != '\0' && set_check(s1[front], set))
 		front++;

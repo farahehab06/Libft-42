@@ -6,12 +6,11 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 12:07:43 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/10/07 13:26:09 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 15:00:42 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

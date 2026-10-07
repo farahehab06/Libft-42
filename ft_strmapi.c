@@ -6,7 +6,7 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 08:59:53 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/10/07 13:22:50 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 14:50:40 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t			len;
 
 	if (!s || !f)
-		return ;
+		return (NULL);
 	i = 0;
 	len = ft_strlen(s);
 	s2 = malloc(len + 1);

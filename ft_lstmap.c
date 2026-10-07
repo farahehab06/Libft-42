@@ -6,7 +6,7 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/03 17:00:46 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/10/07 13:14:00 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 14:52:57 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,17 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (first);
 }
+// #include <stdio.h>
+
+// int	main(void)
+// {
+// 	t_list *node;
+// 	t_list *lst = NULL;
+// 	int i;
+// 	i = 3;
+// 	node = ft_lstnew(&i);
+// 	ft_lstadd_front(&lst, node);
+// 	if (lst == node)
+// 	{
+// 		printf("same address. lst now points to new\n");
+// 	}

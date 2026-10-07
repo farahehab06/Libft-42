@@ -6,13 +6,14 @@
 /*   By: fabuassa <fabuassa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 12:28:41 by fabuassa          #+#    #+#             */
-/*   Updated: 2026/10/07 12:37:02 by fabuassa         ###   ########.fr       */
+/*   Updated: 2026/10/07 14:47:58 by fabuassa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <unistd.h>
 
 typedef struct s_list
 {
