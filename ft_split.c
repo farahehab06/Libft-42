@@ -85,9 +85,10 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if (s[i] == '\0')
 			break ;
-		array[j] = fill(s, c, &i);
-		if (!array[j])
+		array[j++] = fill(s, c, &i);
+		if (!array[j - 1])
 			return (free_arr(array, j), NULL);
+		
 	}
 	array[j] = NULL;
 	return (array);

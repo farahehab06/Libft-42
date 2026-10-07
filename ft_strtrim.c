@@ -35,7 +35,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1 || !set)
 		return (NULL);
-	(NULL);
 	front = 0;
 	i = 0;
 	back = ft_strlen(s1);
