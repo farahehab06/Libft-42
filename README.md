@@ -64,7 +64,7 @@ ft_lstmap — Creates a new list by applying a function to each node.
 Clone the repository:
 
 ```bash
-git clone https://github.com/farahehab06/libft.git
+git clone https://github.com/farahehab06/libft-42.git
 cd libft
 ```
 
